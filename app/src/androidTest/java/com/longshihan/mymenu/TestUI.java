@@ -7,7 +7,7 @@ import android.support.test.uiautomator.UiObjectNotFoundException;
 import android.support.test.uiautomator.UiSelector;
 
 /**
- * Created by longshihan on 2017/7/9.
+ * 打开浏览器
  */
 
 public class TestUI extends UiAutomatorTestCase {

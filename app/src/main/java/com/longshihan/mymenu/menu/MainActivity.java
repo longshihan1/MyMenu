@@ -1,4 +1,4 @@
-package com.longshihan.mymenu;
+package com.longshihan.mymenu.menu;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

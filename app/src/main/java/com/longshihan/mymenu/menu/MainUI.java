@@ -1,4 +1,4 @@
-package com.longshihan.mymenu;
+package com.longshihan.mymenu.menu;
 
 import android.content.Context;
 import android.graphics.Color;

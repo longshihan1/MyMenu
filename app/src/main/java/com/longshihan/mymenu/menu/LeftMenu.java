@@ -1,4 +1,4 @@
-package com.longshihan.mymenu;
+package com.longshihan.mymenu.menu;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -6,6 +6,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+
+import com.longshihan.mymenu.R;
 
 public class LeftMenu extends Fragment {
 
