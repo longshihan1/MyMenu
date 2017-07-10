@@ -40,7 +40,8 @@ public class MessageItemTouchCallBack extends ItemTouchHelper.Callback {
 
         //刷新adapter
 
-        mItemTouchHelperAdapterCallback.onItemSwiped(viewHolder.getAdapterPosition());
+        //为了出现侧滑注释
+       // mItemTouchHelperAdapterCallback.onItemSwiped(viewHolder.getAdapterPosition());
 
     }
 
@@ -63,12 +64,20 @@ public class MessageItemTouchCallBack extends ItemTouchHelper.Callback {
             viewHolder.itemView.setAlpha(alpha);
             viewHolder.itemView.setScaleX(alpha);
             viewHolder.itemView.setScaleY(alpha);
-            if (alpha<=0){
+            if (alpha <= 0) {
                 viewHolder.itemView.setAlpha(1);
                 viewHolder.itemView.setScaleX(1);
                 viewHolder.itemView.setScaleY(1);
             }
+
+            if (dX <= -0.5f * viewHolder.itemView.getWidth()) {
+                viewHolder.itemView.setTranslationX(-0.5f * viewHolder.itemView.getWidth());
+            }else {
+                viewHolder.itemView.setTranslationX(dX);
+            }
+
+        } else {
+            super.onChildDraw(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive);
         }
-        super.onChildDraw(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive);
     }
 }
