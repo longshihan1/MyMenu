@@ -8,6 +8,8 @@ import android.widget.FrameLayout;
 public class RickySplahActivity extends AppCompatActivity {
 
     private FrameLayout mFrameLayout;
+    SplashView splashView;
+    ContentView contentView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,11 +18,11 @@ public class RickySplahActivity extends AppCompatActivity {
 
         mFrameLayout = new FrameLayout(this);
 
-        ContentView contentView = new ContentView(this);
+        contentView = new ContentView(this);
 
         mFrameLayout.addView(contentView);
 
-        SplashView splashView = new SplashView(this);
+        splashView = new SplashView(this);
         mFrameLayout.addView(splashView);
         setContentView(mFrameLayout);
 
@@ -28,15 +30,16 @@ public class RickySplahActivity extends AppCompatActivity {
         startSplashDataLoad();
     }
 
-    Handler mHandler=new Handler();
+    Handler mHandler = new Handler();
+
     private void startSplashDataLoad() {
         //模拟数据的加载
         mHandler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                //数据加载完毕，开启动画
-
+                //数据加载完毕，1动画结束2,3动画开始
+                splashView.splashDisappear();
             }
-        },5000);
+        }, 5000);
     }
 }
